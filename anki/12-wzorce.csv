@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::12 Wzorce
 "Czym jest antywzorzec?","Powtarzalnym, pozornie dobrym rozwiązaniem, które systematycznie szkodzi (utrudnia zmiany/testy)."
 "Czym jest code smell?","Sygnałem ostrzegawczym w kodzie — nie błędem, lecz objawem głębszego problemu projektowego."
 "Smell vs antywzorzec?","Smell to czerwona lampka do zbadania; antywzorzec to konkretna, nazwana pułapka projektowa."

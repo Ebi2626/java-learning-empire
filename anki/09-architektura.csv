@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::09 Architektura
 "Kto sformułował DDD?","Eric Evans (książka ""Domain-Driven Design"", 2003) — podejście do złożonej domeny biznesowej."
 "Co to ubiquitous language?","Wspólny język biznesu i programistów, spójny w rozmowie i w kodzie, w obrębie jednego bounded context."
 "Co to bounded context?","Granica, w której model i język są spójne; ten sam termin może znaczyć co innego w innym kontekście."

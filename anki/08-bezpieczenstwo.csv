@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::08 Bezpieczeństwo
 "Z czego składa się JWT?","Trzy części base64url oddzielone kropkami: header.payload.signature."
 "Czy JWT jest zaszyfrowany?","Nie — jest tylko zakodowany (base64url). Podpis chroni integralność, nie poufność; nie wkładaj sekretów."
 "Co chroni podpis JWT?","Integralność — że payload nie został zmieniony. NIE ukrywa treści (każdy ją odczyta)."

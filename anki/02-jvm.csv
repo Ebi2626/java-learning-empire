@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::02 JVM
 "Trzy główne fazy ładowania klasy w JVM?","Loading, Linking (Verification→Preparation→Resolution), Initialization."
 "Co robi faza Loading?","Classloader odczytuje bajty .class, JVM parsuje je i tworzy obiekt Class w metaspace."
 "Trzy podfazy Linking?","Verification (poprawność/bezpieczeństwo bytecode), Preparation (alokacja + domyślne wartości pól statycznych), Resolution (referencje symboliczne → bezpośrednie)."

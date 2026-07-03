@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::00 Fundament
 "Co wykonuje JVM?","Bytecode z plików .class (nie kod źródłowy, nie kod maszynowy bezpośrednio)."
 "JDK = ?","JRE + narzędzia deweloperskie (javac, jar, jlink, jdeps, jshell...)."
 "JRE = ?","JVM + biblioteki standardowe (środowisko uruchomieniowe)."

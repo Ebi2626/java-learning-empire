@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::04 Narzędzia
 "Czym jest AssertJ?","Biblioteką fluent (płynnych) asercji — assertThat(actual) zwraca typowany obiekt asercji do łańcuchowania metod."
 "Główny statyczny import AssertJ?","org.assertj.core.api.Assertions.* (assertThat, assertThatThrownBy, catchThrowable, tuple...)."
 "Dlaczego AssertJ ma lepsze autouzupełnianie IDE niż JUnit/Hamcrest?","assertThat jest przeciążony i zwraca podtyp AbstractAssert zależny od typu argumentu, więc IDE podpowiada tylko metody sensowne dla tego typu."

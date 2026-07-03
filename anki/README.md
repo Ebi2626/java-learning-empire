@@ -13,13 +13,18 @@ ręcznej i z notatek, działa z natywnym importem Anki.
 > **Źródłowy format w notatkach** to `Pytanie;Odpowiedź` (czytelny) — skrypt eksportujący tnie na
 > **pierwszym** `;` i zamienia na cytowany CSV. Dzięki temu `;` w treści odpowiedzi nie psuje importu.
 
-## Import do Anki (desktop)
-1. `File → Import…` → wybierz plik `.csv`.
-2. **Type:** Basic. **Deck:** np. `Java::00 Fundament`.
-3. **Fields separated by:** Comma.
-4. Zaznacz „Allow HTML in fields".
-5. **Field mapping:** Field 1 → Front, Field 2 → Back.
-6. Wybór duplikatów: „Update" jeśli reimportujesz po edycji.
+## Import do Anki (desktop) — jednoklikowy
+Każdy plik ma na górze **nagłówek konfiguracyjny** (`#deck:`, `#separator:comma`, `#html:true`,
+`#notetype:Basic`), więc Anki sam ustawia talię, separator, HTML i typ notatki.
+
+1. Anki desktop → `File → Import…` → wybierz plik `.csv` (np. `05-spring.csv`).
+2. Okno importu ma już wszystko ustawione z nagłówka — talia to np. `Java::05 Spring`,
+   Field 1 → Front, Field 2 → Back. Kliknij **Import**.
+3. Powtórz dla każdego z 13 plików. Powstanie drzewo talii pod `Java::`.
+4. Reimport po edycji: te same pytania (Front) są aktualizowane, nie duplikowane.
+
+> Wymaga Anki **2.1.54+** (obsługa nagłówków `#`). Starsza wersja: usuń linie `#...` z góry pliku
+> i w oknie importu ustaw ręcznie **Comma**, **Allow HTML**, talię i mapowanie Front/Back.
 
 > Wskazówka: użyj notacji talii z `::`, by mieć drzewo `Java::01 Język`, `Java::05 Spring` itd.
 

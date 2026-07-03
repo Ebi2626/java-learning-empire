@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::11 Flowable
 "Co to BPMN 2.0?","Standard OMG do graficznego modelowania procesów biznesowych, będący jednocześnie wykonywalnym XML-em."
 "BPMN jest tylko rysunkiem?","Nie — BPMN 2.0 jest executable: ten sam plik .bpmn20.xml jest diagramem i wsadem dla silnika procesowego."
 "Process definition vs process instance?","Definicja to wersjonowany szablon z pliku BPMN; instancja to konkretne wykonanie (relacja 1:N)."

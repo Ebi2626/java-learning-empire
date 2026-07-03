@@ -1,3 +1,7 @@
+#separator:comma
+#html:true
+#notetype:Basic
+#deck:Java::01 Język
 "Dwie główne korzyści generyków?","Type safety w czasie kompilacji (błąd typu = błąd kompilacji) oraz eliminacja ręcznego rzutowania."
 "Co oznaczają T, E, K, V?","Type, Element, Key, Value — umowne nazwy parametrów typu (kompilator nie zna ich znaczenia)."
 "Co to bounded type parameter?","Ograniczenie parametru, np. <T extends Comparable<T>> — zawęża typy i odblokowuje API granicy; zawsze extends (też dla interfejsów)."

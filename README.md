@@ -1,43 +1,36 @@
-# Nauka Javy — fullstack (Angular + Java)
+# java-learning-empire
 
-System nauki Javy zaprojektowany dla osoby z mocnym frontendem (Angular) i podstawami Javy
-ze studiów. Cel: dojść do poziomu zawodowego fullstacka **bez black-boxów** — umieć
-odpowiedzieć na dowolne pytanie z danego obszaru i rozumieć rzeczy „od pierwszych zasad".
+Baza wiedzy do nauki Javy pod pracę fullstacka (Angular + Java/Spring) — **głębokie zrozumienie bez black-boxów**.
+Zbudowana jako **vault Obsidiana** i publikowana jako strona z interaktywnym grafem przez **[Quartz](https://quartz.jzhao.xyz)**.
 
-## Co tu jest
+🌐 **Strona online:** https://ebi2626.github.io/java-learning-empire/
 
-| Plik / katalog | Po co |
+## Struktura
+
+| Ścieżka | Co |
 |---|---|
-| [[ROADMAP]] | Praktyczna roadmapa 0–12: tematy, narzędzia, frameworki, wzorce. **Zacznij tutaj.** |
-| [[PLAN]] | Szczegółowy plan procesu nauki + projektu (jak realizujemy cele). |
-| [[MOC]] | Map of Content — mapa nawigacyjna vaultu Obsidiana. |
-| `wiedza/` | Baza wiedzy (vault Obsidiana). Notatki tematyczne z kryteriami opanowania. |
-| `_templates/` | Szablony notatek (Obsidian Templater / wbudowane). |
-| `anki/` | Talie fiszek (CSV) + instrukcja importu do Anki. |
-| `cwiczenia/` | Małe projekty kodu (Maven) — praktyka. |
-| `projekt-rekrutacja/` | Docelowy projekt: system rekrutacji dla stowarzyszeń (Flowable, multitenancy, cloud-native). |
+| `content/` | Vault Obsidiana = treść publikowanej strony (notatki `wiedza/`, `ROADMAP.md`, `MOC.md`, projekt). |
+| `content/_templates`, `content/anki`, `content/cwiczenia` | Wykluczone z publikacji (`ignorePatterns` w `quartz.config.ts`). |
+| `quartz/`, `quartz.config.ts`, `quartz.layout.ts` | Silnik i konfiguracja Quartz. |
+| `.github/workflows/deploy.yml` | Automatyczny deploy na GitHub Pages przy pushu na `main`. |
 
-## Jak używać (Obsidian)
+## Obsidian
 
-1. W Obsidianie: **Open folder as vault** → wskaż ten katalog (`nauka/`).
-2. Wejdź w [[MOC]] albo [[ROADMAP]].
-3. Każda notatka tematyczna ma na dole sekcję **„Kryteria opanowania"** — to twój checklist:
-   gdy potrafisz odpowiedzieć na wszystkie pytania *bez zaglądania*, temat jest domknięty.
-4. Fiszki: importuj pliki z `anki/` (patrz [[anki/README]]).
+Otwórz folder **`content/`** jako vault (`Open folder as vault`). Wikilinki, graf i backlinki działają tak samo online.
 
-## Zasada „brak black-boxów"
+## Lokalny podgląd (jak strona online)
 
-Każdy temat ma trzy poziomy:
-- **Co** — definicja, API, jak użyć.
-- **Jak** — co się dzieje pod spodem (np. jak działa GC, classloader, proxy Springa).
-- **Dlaczego / kiedy** — kompromisy, wąskie gardła, kiedy NIE używać.
+```bash
+npm ci                 # raz, instalacja zależności
+npx quartz build --serve   # http://localhost:8080
+```
 
-Notatka jest „kompletna" dopiero gdy masz wszystkie trzy poziomy i przeszedłeś
-**Black-box check** (lista rzeczy, które musisz umieć wyjaśnić od podstaw).
+## Publikacja na GitHub Pages
 
-## Środowisko (wykryte na tej maszynie, 2026-06-29)
+Deploy jest automatyczny — wystarczy **raz** włączyć Pages, potem każdy push na `main` odświeża stronę:
 
-- **JDK 25** (Red Hat build). Uwaga: rynek pracy to głównie **LTS: 17 i 21** — patrz [[ROADMAP]] faza 0.
-- **Podman 5.8** (zamiennik Dockera, Fedora) — komendy `docker` zadziałają jako alias do `podman`.
-- **Node 22 / npm 10** — dla części Angularowej.
-- Brak Mavena/Gradle/SDKMAN — instalacja w fazie 0.
+1. GitHub → repo **Settings → Pages → Build and deployment → Source: `GitHub Actions`**.
+2. `git push origin main` — workflow zbuduje i opublikuje stronę.
+3. Strona pod `https://ebi2626.github.io/java-learning-empire/`.
+
+> Zmieniłeś nazwę repo lub użytkownika? Zaktualizuj `baseUrl` w `quartz.config.ts`.
